@@ -1,0 +1,34 @@
+--- origsrc/axis-1_4/build.xml	2006-04-22 20:57:27.000000000 -0500
++++ src/axis-1_4/build.xml	2010-05-18 03:50:06.519532900 -0500
+@@ -1,9 +1,9 @@
+ <?xml version="1.0"?>
+ <!DOCTYPE project [
+-        <!ENTITY properties SYSTEM "file:xmls/properties.xml">
+-        <!ENTITY paths  SYSTEM "file:xmls/path_refs.xml">
+-        <!ENTITY taskdefs SYSTEM "file:xmls/taskdefs.xml">
+-        <!ENTITY targets SYSTEM "file:xmls/targets.xml">
++        <!ENTITY properties SYSTEM "xmls/properties.xml">
++        <!ENTITY paths  SYSTEM "xmls/path_refs.xml">
++        <!ENTITY taskdefs SYSTEM "xmls/taskdefs.xml">
++        <!ENTITY targets SYSTEM "xmls/targets.xml">
+ ]>
+ 
+ <project name="axis" default="compile" basedir=".">
+--- origsrc/axis-1_4/tools/test.xml	2006-04-22 20:57:27.000000000 -0500
++++ src/axis-1_4/tools/test.xml	2010-05-18 03:50:06.529533500 -0500
+@@ -1,10 +1,10 @@
+ <?xml version="1.0" ?>
+ <!DOCTYPE project [
+-        <!ENTITY properties SYSTEM "file:../xmls/properties.xml">
+-        <!ENTITY paths  SYSTEM "file:../xmls/path_refs.xml">
+-        <!ENTITY taskdefs SYSTEM "file:../xmls/taskdefs.xml">
+-        <!ENTITY taskdefs_post_compile SYSTEM "file:../xmls/taskdefs_post_compile.xml">
+-        <!ENTITY targets SYSTEM "file:../xmls/targets.xml">
++        <!ENTITY properties SYSTEM "../xmls/properties.xml">
++        <!ENTITY paths  SYSTEM "../xmls/path_refs.xml">
++        <!ENTITY taskdefs SYSTEM "../xmls/taskdefs.xml">
++        <!ENTITY taskdefs_post_compile SYSTEM "../xmls/taskdefs_post_compile.xml">
++        <!ENTITY targets SYSTEM "../xmls/targets.xml">
+ ]>
+ 
+ <!-- ===================================================================

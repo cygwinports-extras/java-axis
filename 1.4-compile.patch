@@ -1,0 +1,18 @@
+java.util.ResourceBundle.clearCache() is final
+
+--- origsrc/axis-1_4/src/org/apache/axis/i18n/ProjectResourceBundle.java	2006-04-22 20:57:27.000000000 -0500
++++ src/axis-1_4/src/org/apache/axis/i18n/ProjectResourceBundle.java	2010-05-18 03:50:06.524533200 -0500
+@@ -360,10 +360,12 @@ public class ProjectResourceBundle exten
+     /**
+      * Clears the internal cache
+      */
++    /*
+     public static void clearCache()
+     {
+         bundleCache.clear();
+     }
++    */
+     
+     public String toString() {
+         return resourceName;
+

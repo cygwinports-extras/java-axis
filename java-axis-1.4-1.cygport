@@ -1,0 +1,31 @@
+JAVA_CLASSPATH="bsf.jar:commons-discovery.jar:commons-httpclient.jar:commons-logging.jar:commons-net.jar:jakarta-regexp.jar:javaee.jar:wsdl4j.jar:xmlsec.jar"
+inherit ant
+
+HOMEPAGE="http://ws.apache.org/axis/"
+SRC_URI="mirror://apache/ws/${ORIG_PN}/${PV//./_}/${ORIG_PN}-src-${PV//./_}.tar.gz"
+SRC_DIR="axis-${PV//./_}"
+
+PATCH_URI="
+	1.4-compile.patch
+	1.4-doctype-entities.patch
+"
+
+DISTCLEANFILES="lib/*.jar"
+
+PKG_NAMES="${PN} java-jaxrpc java-saaj ant-axis"
+java_axis_CONTENTS="${JAVA_DIR#/}/axis.jar ${JAVADOC_DIR#/} usr/share/doc/"
+java_jaxrpc_CONTENTS="${JAVA_DIR#/}/jaxrpc.jar"
+java_saaj_CONTENTS="${JAVA_DIR#/}/saaj.jar"
+ant_axis_CONTENTS="${ANT_HOME#/}"
+
+ANT_BUILD_ARGS="
+	-Dcommons-discovery.jar=${JAVA_DIR}/commons-discovery.jar
+	-Dcommons-logging.jar=${JAVA_DIR}/commons-logging.jar
+	-Dlog4j-core.jar=${JAVA_DIR}/log4j.jar
+	-Dwsdl4j.jar=${JAVA_DIR}/wsdl4j.jar
+	-Daxis-ant.present=false
+"
+ANT_BUILD_TARGETS="compile" # javadocs already built
+ANT_INSTALL_JARS="build/lib/axis.jar build/lib/jaxrpc.jar build/lib/saaj.jar"
+ANT_INSTALL_JAVADOC="docs/apiDocs"
+ANT_INSTALL_TASKS="build/lib/axis-ant.jar"

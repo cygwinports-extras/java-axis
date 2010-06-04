@@ -1,0 +1,6 @@
+category: Java
+requires: java-saaj java-servlet-api
+external-source: java-axis
+sdesc: "Java API for XML-based RPC"
+ldesc: "Apache Axis is an implementation of the SOAP (Simple Object 
+Access Protocol) submission to W3C."

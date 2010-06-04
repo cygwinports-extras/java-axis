@@ -1,0 +1,5 @@
+category: Java
+requires: java-jaxrpc java-saaj java-bsf java-commons-discovery java-commons-httpclient java-commons-logging java-commons-net java-jakarta-regexp java-javaee java-wsdl4j java-xmlsec
+sdesc: "Apache SOAP API for Java"
+ldesc: "Apache Axis is an implementation of the SOAP (Simple Object 
+Access Protocol) submission to W3C."

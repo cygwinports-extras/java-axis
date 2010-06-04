@@ -1,0 +1,6 @@
+category: Java
+requires: 
+external-source: java-axis
+sdesc: "SOAP with Attachments API for Java"
+ldesc: "Apache Axis is an implementation of the SOAP (Simple Object 
+Access Protocol) submission to W3C."
